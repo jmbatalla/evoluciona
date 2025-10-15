@@ -45,7 +45,7 @@ const Navigation = () => {
               </a>
             ))}
             <Button asChild variant="default" size="lg" className="shadow-glow">
-              <a href="#contact">Solicita tu presupuesto</a>
+              <a href="#contact">¡Evoluciona Ya!</a>
             </Button>
           </div>
 
@@ -73,7 +73,7 @@ const Navigation = () => {
             ))}
             <Button asChild variant="default" size="lg" className="w-full">
               <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
-                Solicita tu presupuesto
+                ¡Evoluciona Ya!
               </a>
             </Button>
           </div>
