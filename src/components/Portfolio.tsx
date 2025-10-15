@@ -1,36 +1,54 @@
 import { ExternalLink } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import compramosCasa from "@/assets/portfolio/compramos-casa.png";
+import showwise from "@/assets/portfolio/showwise.png";
+import estetizar from "@/assets/portfolio/estetizar.png";
+import brutalShow from "@/assets/portfolio/brutal-show.png";
+import displacetool from "@/assets/portfolio/displacetool.png";
+import grupoHermosilla from "@/assets/portfolio/grupo-hermosilla.png";
 
 const projects = [
   {
-    title: "E-commerce Moda",
-    description: "Tienda online con integración de pago y gestión de inventario",
-    category: "Diseño Web",
+    title: "Compramos Tu Casa en 1 Semana",
+    description: "Landing page optimizada para captación de leads inmobiliarios",
+    category: "Landing Page",
+    url: "https://compramostucasaen1semana.es/",
+    image: compramosCasa,
   },
   {
-    title: "App Fitness",
-    description: "Aplicación móvil para seguimiento de entrenamientos personalizados",
-    category: "App Móvil",
+    title: "ShowWise",
+    description: "Web corporativa para agencia consultora de espectáculos",
+    category: "Página Web",
+    url: "http://showwise.es/",
+    image: showwise,
   },
   {
-    title: "Restaurante Local",
-    description: "Web con reservas online y menú digital interactivo",
-    category: "Web + SEO",
+    title: "Estetizar",
+    description: "Ecommerce de cosmética y complementos alimenticios",
+    category: "Ecommerce",
+    url: "https://estetizar.es/",
+    image: estetizar,
   },
   {
-    title: "Chatbot IA",
-    description: "Asistente virtual para atención al cliente 24/7",
-    category: "Automatización IA",
+    title: "Brutal Show",
+    description: "Web de espectáculos con gestión de eventos y roster",
+    category: "Página Web",
+    url: "https://espectaculosbrutalshow.com/",
+    image: brutalShow,
   },
   {
-    title: "Startup Tech",
-    description: "Landing page con generación de leads automatizada",
-    category: "Marketing Digital",
+    title: "DisplaceTool",
+    description: "Plataforma web y app móvil para accesibilidad urbana",
+    category: "Web + App",
+    url: "https://displacetool.es/",
+    image: displacetool,
   },
   {
-    title: "Clínica Dental",
-    description: "Sistema de gestión de citas y recordatorios automáticos",
-    category: "Soluciones Integrales",
+    title: "Grupo Hermosilla",
+    description: "Web corporativa para administración de fincas",
+    category: "Página Web",
+    url: "https://grupohermosilla.es/",
+    image: grupoHermosilla,
   },
 ];
 
@@ -50,22 +68,34 @@ const Portfolio = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
-            <Card
+            <a
               key={index}
-              className="group overflow-hidden hover-lift cursor-pointer bg-card border-border shadow-card animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
             >
-              <div className="aspect-video bg-gradient-tech relative overflow-hidden">
-                <div className="absolute inset-0 bg-secondary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <ExternalLink className="w-8 h-8 text-white" />
+              <Card
+                className="group overflow-hidden hover-lift cursor-pointer bg-card border-border shadow-card animate-fade-in h-full"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="aspect-video relative overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-secondary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <ExternalLink className="w-8 h-8 text-white" />
+                  </div>
                 </div>
-              </div>
-              <div className="p-6">
-                <div className="text-xs font-semibold text-primary mb-2">{project.category}</div>
-                <h3 className="text-xl font-bold mb-2 text-foreground">{project.title}</h3>
-                <p className="text-muted-foreground">{project.description}</p>
-              </div>
-            </Card>
+                <div className="p-6">
+                  <div className="text-xs font-semibold text-primary mb-2">{project.category}</div>
+                  <h3 className="text-xl font-bold mb-2 text-foreground">{project.title}</h3>
+                  <p className="text-muted-foreground">{project.description}</p>
+                </div>
+              </Card>
+            </a>
           ))}
         </div>
       </div>
