@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, User, MessageSquare, Send, Phone } from "lucide-react";
-import emailjs from '@emailjs/browser';
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -20,19 +20,15 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Inicializar EmailJS con tu Public Key
-      emailjs.init("YOUR_PUBLIC_KEY"); // Reemplazar con tu clave pública de EmailJS
-      
-      await emailjs.send(
-        "YOUR_SERVICE_ID", // Reemplazar con tu Service ID
-        "YOUR_TEMPLATE_ID", // Reemplazar con tu Template ID
-        {
-          from_name: formData.name,
-          from_email: formData.email,
+      const { error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name: formData.name,
+          email: formData.email,
           message: formData.message,
-          to_email: "hola@evolucionat.es",
         }
-      );
+      });
+
+      if (error) throw error;
 
       toast({
         title: "¡Mensaje enviado!",
@@ -40,6 +36,7 @@ const ContactForm = () => {
       });
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
+      console.error("Error sending email:", error);
       toast({
         title: "Error al enviar",
         description: "Por favor, intenta de nuevo o contáctanos directamente.",
