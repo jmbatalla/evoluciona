@@ -1,4 +1,8 @@
 import logo from "@/assets/logo.png";
+import PrivacyPolicy from "@/components/PrivacyPolicy";
+import CookiesPolicy from "@/components/CookiesPolicy";
+import LegalNotice from "@/components/LegalNotice";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -44,19 +48,25 @@ const Footer = () => {
             <h3 className="font-bold mb-4 text-lg">Legal</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-white/80 hover:text-primary transition-colors">
-                  Política de Privacidad
-                </a>
+                <PrivacyPolicy>
+                  <Button variant="link" className="text-white/80 hover:text-primary transition-colors p-0 h-auto font-normal">
+                    Política de Privacidad
+                  </Button>
+                </PrivacyPolicy>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-primary transition-colors">
-                  Política de Cookies
-                </a>
+                <CookiesPolicy>
+                  <Button variant="link" className="text-white/80 hover:text-primary transition-colors p-0 h-auto font-normal">
+                    Política de Cookies
+                  </Button>
+                </CookiesPolicy>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-primary transition-colors">
-                  Aviso Legal
-                </a>
+                <LegalNotice>
+                  <Button variant="link" className="text-white/80 hover:text-primary transition-colors p-0 h-auto font-normal">
+                    Aviso Legal
+                  </Button>
+                </LegalNotice>
               </li>
             </ul>
           </div>
