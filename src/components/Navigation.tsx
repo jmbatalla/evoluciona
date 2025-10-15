@@ -30,7 +30,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4 md:px-8 lg:px-16">
         <div className="flex items-center justify-between h-20">
           <a href="#hero" className="flex items-center">
-            <img src={logo} alt="EvolucionaT" className="h-20 w-auto" />
+            <img src={logo} alt="EvolucionaT" className="h-24 w-auto" />
           </a>
 
           {/* Desktop Menu */}
