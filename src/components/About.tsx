@@ -7,7 +7,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
             <h2 className="text-3xl md:text-4xl lg:text-5xl mb-6 text-secondary">
-              Más de 10 años ayudando a empresas a crecer en el mundo digital
+              Más de 5 años ayudando a empresas a crecer en el mundo digital
             </h2>
             
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">

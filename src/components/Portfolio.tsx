@@ -58,7 +58,7 @@ const Portfolio = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4 text-secondary">
-            Proyectos que inspiran confianza
+            Últimos proyectos
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Hemos trabajado con marcas, negocios locales y startups que buscaban destacar en el mundo digital. 
