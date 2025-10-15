@@ -51,39 +51,38 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-secondary relative overflow-hidden">
-      
-      <div className="container mx-auto relative z-10">
+    <section id="contact" className="section-padding bg-background">
+      <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* CTA Column */}
-          <div className="text-white animate-fade-in">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+          <div className="animate-fade-in">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-secondary">
               ¿Listo para evolucionar digitalmente?
             </h2>
-            <p className="text-xl text-white/90 mb-8">
+            <p className="text-xl text-foreground/80 mb-8">
               Hablemos de tu proyecto hoy mismo y descubre cómo podemos ayudarte a crecer
             </p>
             
             <div className="space-y-4">
-              <div className="flex items-center gap-3 text-white">
-                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-white" />
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-white/70">Email</p>
-                  <a href="mailto:hola@evolucionat.es" className="text-lg hover:text-primary transition-colors">
+                  <p className="text-sm text-muted-foreground">Email</p>
+                  <a href="mailto:hola@evolucionat.es" className="text-lg text-foreground hover:text-primary transition-colors">
                     hola@evolucionat.es
                   </a>
                 </div>
               </div>
               
-              <div className="flex items-center gap-3 text-white">
-                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-white" />
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-white/70">WhatsApp</p>
-                  <a href="https://wa.me/34614247275" target="_blank" rel="noopener noreferrer" className="text-lg hover:text-primary transition-colors">
+                  <p className="text-sm text-muted-foreground">WhatsApp</p>
+                  <a href="https://wa.me/34614247275" target="_blank" rel="noopener noreferrer" className="text-lg text-foreground hover:text-primary transition-colors">
                     +34 614 247 275
                   </a>
                 </div>
@@ -92,7 +91,7 @@ const ContactForm = () => {
           </div>
 
           {/* Form Column */}
-          <div className="bg-background/95 backdrop-blur-sm p-8 rounded-lg shadow-2xl animate-fade-in">
+          <div className="bg-card border border-border p-8 rounded-lg shadow-card animate-fade-in">
             <h3 className="text-2xl font-bold mb-6 text-secondary">Solicita tu presupuesto</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
