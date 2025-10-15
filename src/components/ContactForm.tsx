@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, User, MessageSquare, Send, ArrowRight } from "lucide-react";
+import { Mail, User, MessageSquare, Send, Phone } from "lucide-react";
 import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
@@ -51,8 +51,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-gradient-tech relative overflow-hidden">
-      <div className="absolute inset-0 bg-secondary/90"></div>
+    <section id="contact" className="section-padding bg-secondary relative overflow-hidden">
       
       <div className="container mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -64,11 +63,31 @@ const ContactForm = () => {
             <p className="text-xl text-white/90 mb-8">
               Hablemos de tu proyecto hoy mismo y descubre cómo podemos ayudarte a crecer
             </p>
-            <div className="flex items-center gap-2 text-white/80">
-              <Mail className="w-5 h-5 text-white" />
-              <a href="mailto:hola@evolucionat.es" className="hover:text-white transition-colors">
-                hola@evolucionat.es
-              </a>
+            
+            <div className="space-y-4">
+              <div className="flex items-center gap-3 text-white">
+                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm text-white/70">Email</p>
+                  <a href="mailto:hola@evolucionat.es" className="text-lg hover:text-primary transition-colors">
+                    hola@evolucionat.es
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-3 text-white">
+                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm text-white/70">WhatsApp</p>
+                  <a href="https://wa.me/34614247275" target="_blank" rel="noopener noreferrer" className="text-lg hover:text-primary transition-colors">
+                    +34 614 247 275
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
