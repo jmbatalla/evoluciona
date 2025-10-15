@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
-            <img src={logo} alt="EvolucionaT" className="h-12 w-auto mb-4 brightness-0 invert" />
+            <img src={logo} alt="EvolucionaT" className="h-16 w-auto mb-4 brightness-0 invert" />
             <p className="text-white/80">
               Transformamos ideas en soluciones digitales innovadoras
             </p>
