@@ -8,12 +8,13 @@ const Hero = () => {
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.65)), url(${heroImage})`,
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), url(${heroImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundAttachment: "fixed",
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-secondary/20 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent"></div>
       
       <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10 text-center animate-fade-in">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
