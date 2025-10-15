@@ -16,11 +16,14 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-secondary/20 to-transparent"></div>
       
       <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10 text-center animate-fade-in">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
           EvolucionaT: transforma tu<br />
-          <span className="text-primary">presencia digital</span> y haz<br />
-          crecer tu negocio
+          <span className="text-primary">presencia digital</span>
         </h1>
+        
+        <p className="text-5xl md:text-6xl lg:text-8xl font-black text-primary mb-6 animate-pulse">
+          ¡Evoluciona Ya!
+        </p>
         
         <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-10 max-w-3xl mx-auto">
           Diseño web, apps, posicionamiento SEO, automatizaciones con IA y soporte informático.
