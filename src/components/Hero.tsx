@@ -8,7 +8,7 @@ const Hero = () => {
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url(${heroImage})`,
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.65)), url(${heroImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

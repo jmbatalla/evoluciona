@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, User, MessageSquare, Send } from "lucide-react";
+import { Mail, User, MessageSquare, Send, ArrowRight } from "lucide-react";
 import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
@@ -51,75 +51,85 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-muted">
-      <div className="container mx-auto max-w-2xl">
-        <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4 text-secondary">
-            Solicita tu presupuesto
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Cuéntanos sobre tu proyecto y te responderemos en menos de 24 horas
-          </p>
-          <div className="flex items-center justify-center gap-2 mt-4 text-muted-foreground">
-            <Mail className="w-5 h-5 text-primary" />
-            <a href="mailto:hola@evolucionat.es" className="hover:text-primary transition-colors">
-              hola@evolucionat.es
-            </a>
+    <section id="contact" className="section-padding bg-gradient-tech relative overflow-hidden">
+      <div className="absolute inset-0 bg-secondary/90"></div>
+      
+      <div className="container mx-auto relative z-10">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* CTA Column */}
+          <div className="text-white animate-fade-in">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+              ¿Listo para evolucionar digitalmente?
+            </h2>
+            <p className="text-xl text-white/90 mb-8">
+              Hablemos de tu proyecto hoy mismo y descubre cómo podemos ayudarte a crecer
+            </p>
+            <div className="flex items-center gap-2 text-white/80">
+              <Mail className="w-5 h-5 text-white" />
+              <a href="mailto:hola@evolucionat.es" className="hover:text-white transition-colors">
+                hola@evolucionat.es
+              </a>
+            </div>
+          </div>
+
+          {/* Form Column */}
+          <div className="bg-background/95 backdrop-blur-sm p-8 rounded-lg shadow-2xl animate-fade-in">
+            <h3 className="text-2xl font-bold mb-6 text-secondary">Solicita tu presupuesto</h3>
+            
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="relative">
+                <User className="absolute left-3 top-3 w-5 h-5 text-muted-foreground" />
+                <Input
+                  type="text"
+                  placeholder="Nombre completo"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  required
+                  className="pl-12 h-12"
+                />
+              </div>
+
+              <div className="relative">
+                <Mail className="absolute left-3 top-3 w-5 h-5 text-muted-foreground" />
+                <Input
+                  type="email"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  required
+                  className="pl-12 h-12"
+                />
+              </div>
+
+              <div className="relative">
+                <MessageSquare className="absolute left-3 top-3 w-5 h-5 text-muted-foreground" />
+                <Textarea
+                  placeholder="Cuéntanos sobre tu proyecto..."
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  required
+                  className="pl-12 min-h-32"
+                />
+              </div>
+
+              <Button
+                type="submit"
+                size="lg"
+                disabled={isSubmitting}
+                className="w-full text-lg shadow-glow"
+              >
+                {isSubmitting ? (
+                  "Enviando..."
+                ) : (
+                  <>
+                    Enviar mensaje
+                    <Send className="w-5 h-5 ml-2" />
+                  </>
+                )}
+              </Button>
+            </form>
           </div>
         </div>
-
-        <form onSubmit={handleSubmit} className="space-y-6 animate-fade-in">
-          <div className="relative">
-            <User className="absolute left-3 top-3 w-5 h-5 text-muted-foreground" />
-            <Input
-              type="text"
-              placeholder="Nombre completo"
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              required
-              className="pl-12 h-12"
-            />
-          </div>
-
-          <div className="relative">
-            <Mail className="absolute left-3 top-3 w-5 h-5 text-muted-foreground" />
-            <Input
-              type="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              required
-              className="pl-12 h-12"
-            />
-          </div>
-
-          <div className="relative">
-            <MessageSquare className="absolute left-3 top-3 w-5 h-5 text-muted-foreground" />
-            <Textarea
-              placeholder="Cuéntanos sobre tu proyecto..."
-              value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              required
-              className="pl-12 min-h-32"
-            />
-          </div>
-
-          <Button
-            type="submit"
-            size="lg"
-            disabled={isSubmitting}
-            className="w-full text-lg shadow-glow"
-          >
-            {isSubmitting ? (
-              "Enviando..."
-            ) : (
-              <>
-                Enviar mensaje
-                <Send className="w-5 h-5 ml-2" />
-              </>
-            )}
-          </Button>
-        </form>
       </div>
     </section>
   );
