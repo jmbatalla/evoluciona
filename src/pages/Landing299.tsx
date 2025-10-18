@@ -11,12 +11,12 @@ const Landing299 = () => {
   return (
     <>
       <Helmet>
-        <title>Diseño Web en Murcia por 299 € | EvolucionaT</title>
+        <title>Diseño Web por 299 € | EvolucionaT</title>
         <meta 
           name="description" 
-          content="Tu web profesional por solo 299 €. Hasta 4 páginas, hosting y dominio 1 año incluidos. Entrega en 48h. EvolucionaT – especialistas en diseño web en Murcia." 
+          content="Tu web profesional por solo 299 €. Hasta 4 páginas, hosting y dominio 1 año incluidos. Entrega en 48h. EvolucionaT – especialistas en diseño web profesional." 
         />
-        <meta name="keywords" content="diseño web murcia, web barata murcia, página web 299 euros, diseño web profesional, evolucionat" />
+        <meta name="keywords" content="diseño web, web barata, página web 299 euros, diseño web profesional, evolucionat" />
         <link rel="canonical" href="https://www.evolucionat.es/tu-web-por-299-euros" />
       </Helmet>
       

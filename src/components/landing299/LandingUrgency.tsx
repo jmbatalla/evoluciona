@@ -28,7 +28,7 @@ const LandingUrgency = () => {
           <p>✓ Diseño profesional, SEO básico y dominio incluidos</p>
           <p>✓ Perfecta para autónomos, tiendas, restaurantes y profesionales</p>
           <p>✓ No pagues de más: consigue tu web profesional por solo 299 €</p>
-          <p className="font-bold text-yellow-300">✓ Desde Murcia, ayudando a empresas a crecer en el mundo digital</p>
+          <p className="font-bold text-yellow-300">✓ Ayudando a empresas a crecer en el mundo digital</p>
         </div>
         
         <Button 

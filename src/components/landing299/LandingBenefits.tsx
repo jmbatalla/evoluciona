@@ -58,7 +58,7 @@ const LandingBenefits = () => {
         </div>
         
         <p className="text-center mt-8 text-[hsl(var(--landing-dark-blue))] font-medium text-lg">
-          Tu web lista para atraer clientes desde Murcia y toda España.
+          Tu web lista para atraer clientes de toda España.
         </p>
       </div>
     </section>

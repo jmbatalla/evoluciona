@@ -33,7 +33,7 @@ const LandingTrust = () => {
             Más de 10 años creando webs que venden
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            En EvolucionaT ayudamos a empresas de Murcia a digitalizarse y ganar visibilidad. 
+            En EvolucionaT ayudamos a empresas a digitalizarse y ganar visibilidad. 
             Nos encargamos de todo: diseño, optimización y publicación.
           </p>
         </div>

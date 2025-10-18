@@ -13,7 +13,7 @@ const LandingCTA = () => {
           Haz despegar tu negocio por solo 299 €
         </h2>
         <p className="text-xl text-white/90 mb-8">
-          Oferta exclusiva para Murcia. Plazas limitadas.
+          Oferta exclusiva. Plazas limitadas.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

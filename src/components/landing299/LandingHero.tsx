@@ -26,7 +26,7 @@ const LandingHero = () => {
         
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
           Tu página web profesional<br />
-          en Murcia por solo <span className="text-yellow-300">299 €</span>
+          por solo <span className="text-yellow-300">299 €</span>
         </h1>
         
         <p className="text-xl sm:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
