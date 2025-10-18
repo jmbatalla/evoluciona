@@ -45,6 +45,11 @@ All colors MUST be HSL.
     --shadow-card: 0 4px 20px hsl(220 10% 10% / 0.08);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Landing 299 colors */
+    --landing-dark-blue: 210 100% 20%;
+    --landing-bright-blue: 211 100% 50%;
+    --landing-light-gray: 0 0% 92%;
   }
 
   .dark {
