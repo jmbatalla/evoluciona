@@ -31,7 +31,7 @@ const LandingHero = () => {
         
         <p className="text-xl sm:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
           Diseñamos webs modernas, rápidas y optimizadas para Google.<br />
-          Entrega en 5 días y sin cuotas.
+          Entrega en 48h. Hosting y dominio incluidos.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -56,8 +56,8 @@ const LandingHero = () => {
         </div>
         
         <div className="mt-12 text-white/80 text-sm">
-          ✓ Diseño adaptado a móviles y tablets<br />
-          ✓ SEO básico incluido ✓ Entrega en 5 días
+          ✓ Hasta 4 páginas • ✓ Hosting y dominio 1 año<br />
+          ✓ SEO básico incluido • ✓ Entrega en 48h
         </div>
       </div>
       

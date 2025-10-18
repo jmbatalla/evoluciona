@@ -1,26 +1,36 @@
-import { Smartphone, Settings, Zap, FileCheck } from "lucide-react";
+import { Smartphone, Settings, Zap, FileCheck, Globe, Palette } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const benefits = [
   {
     icon: Smartphone,
-    title: "Diseño adaptado a móviles y tablets",
-    description: "Tu web se verá perfecta en cualquier dispositivo"
-  },
-  {
-    icon: Settings,
-    title: "SEO básico incluido",
-    description: "Optimizada para aparecer en Google"
-  },
-  {
-    icon: Zap,
-    title: "Entrega en menos de 5 días",
-    description: "Tu web lista en tiempo récord"
+    title: "Diseño Responsive",
+    description: "Adaptado a móviles, tablets y ordenadores"
   },
   {
     icon: FileCheck,
-    title: "Precio cerrado. Sin cuotas",
-    description: "299 € y sin letra pequeña"
+    title: "Hasta 4 Páginas",
+    description: "Inicio, servicios, sobre nosotros y contacto"
+  },
+  {
+    icon: Settings,
+    title: "SEO Básico",
+    description: "Optimización para Google desde el día 1"
+  },
+  {
+    icon: Zap,
+    title: "Entrega en 48h",
+    description: "Tu web lista en tiempo récord"
+  },
+  {
+    icon: Globe,
+    title: "Hosting + Dominio",
+    description: "1 año incluido. Sin costes adicionales"
+  },
+  {
+    icon: Palette,
+    title: "Diseño Profesional",
+    description: "Moderno, limpio y orientado a conversión"
   }
 ];
 
@@ -28,7 +38,7 @@ const LandingBenefits = () => {
   return (
     <section className="py-16 sm:py-20 bg-[hsl(var(--landing-light-gray))]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {benefits.map((benefit, index) => (
             <Card 
               key={index}
