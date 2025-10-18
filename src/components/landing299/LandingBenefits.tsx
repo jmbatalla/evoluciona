@@ -29,8 +29,8 @@ const benefits = [
   },
   {
     icon: Palette,
-    title: "Diseño Profesional",
-    description: "Moderno, limpio y orientado a conversión"
+    title: "Mantenimiento",
+    description: "Opcional. Actualizaciones y soporte"
   }
 ];
 

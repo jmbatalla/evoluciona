@@ -16,7 +16,7 @@ const LandingHero = () => {
           <img 
             src={logoEvolucionat} 
             alt="EvolucionaT" 
-            className="h-24 sm:h-32 mx-auto"
+            className="h-32 sm:h-40 lg:h-48 mx-auto"
           />
         </div>
         
@@ -30,8 +30,7 @@ const LandingHero = () => {
         </h1>
         
         <p className="text-xl sm:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
-          Diseñamos webs modernas, rápidas y optimizadas para Google.<br />
-          Entrega en 48h. Hosting y dominio incluidos.
+          Diseñamos webs modernas, rápidas y optimizadas para Google. Entrega en 48h. Hosting y dominio incluidos.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
