@@ -4,14 +4,22 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     name: "María González",
-    business: "Restaurante El Jardín",
     text: "Javier hizo mi web en menos de una semana. Rápido, profesional y muy atento. ¡Lo recomiendo!",
     rating: 5
   },
   {
     name: "Carlos Martínez",
-    business: "Asesoría CM Consultores",
     text: "Por fin tengo una web que me trae clientes reales. Y a un precio increíble.",
+    rating: 5
+  },
+  {
+    name: "Ana Sánchez",
+    text: "Estoy encantada con el resultado. La web es justo lo que necesitaba para mi negocio.",
+    rating: 5
+  },
+  {
+    name: "Pedro López",
+    text: "Profesionales de verdad. Me asesoraron en todo y el proceso fue muy fácil.",
     rating: 5
   }
 ];
@@ -44,9 +52,6 @@ const LandingTrust = () => {
               <div>
                 <p className="font-bold text-[hsl(var(--landing-dark-blue))]">
                   {testimonial.name}
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  {testimonial.business}
                 </p>
               </div>
             </Card>

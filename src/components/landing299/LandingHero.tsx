@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import logoEvolucionat from "@/assets/logo-evolucionat.png";
 
 const LandingHero = () => {
   const scrollToForm = () => {
@@ -11,6 +12,14 @@ const LandingHero = () => {
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1920')] bg-cover bg-center opacity-10"></div>
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="mb-8">
+          <img 
+            src={logoEvolucionat} 
+            alt="EvolucionaT" 
+            className="h-24 sm:h-32 mx-auto"
+          />
+        </div>
+        
         <div className="inline-block mb-6 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
           <span className="text-white text-sm font-medium">⚡ Promoción limitada para nuevos clientes</span>
         </div>
