@@ -1,4 +1,4 @@
-import { Globe, Smartphone, Search, Brain, Wrench } from "lucide-react";
+import { Globe, Smartphone, Search, Share2, Brain, Wrench } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const services = [
@@ -16,6 +16,11 @@ const services = [
     icon: Search,
     title: "SEO y SEM",
     description: "Mejora tu visibilidad, atrae más tráfico y convierte con campañas inteligentes y posicionamiento natural.",
+  },
+  {
+    icon: Share2,
+    title: "Gestión de Redes Sociales",
+    description: "Aumenta tu presencia online, conecta con tu audiencia y potencia tu marca en todas las plataformas sociales.",
   },
   {
     icon: Brain,
