@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import logoEvolucionat from "@/assets/logo-evolucionat.png";
+import logoEvolucionat from "@/assets/logo-evolucionat-white.png";
 
 const LandingHero = () => {
   const scrollToForm = () => {
