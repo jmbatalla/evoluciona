@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import logoEvolucionat from "@/assets/logo-evolucionat-white.png";
+import logoEvolucionat from "@/assets/logo-evolucionat.png";
 
 const LandingHero = () => {
   const scrollToForm = () => {
@@ -16,7 +16,7 @@ const LandingHero = () => {
           <img 
             src={logoEvolucionat} 
             alt="EvolucionaT" 
-            className="h-32 sm:h-40 lg:h-48 mx-auto"
+            className="h-40 sm:h-48 lg:h-56 mx-auto"
           />
         </div>
         
