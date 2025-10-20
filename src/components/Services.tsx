@@ -4,6 +4,12 @@ import { Badge } from "@/components/ui/badge";
 
 const services = [
   {
+    icon: Brain,
+    title: "Automatizaciones con IA",
+    description: "Optimiza tu negocio con flujos automáticos y asistentes inteligentes personalizados.",
+    isNew: true,
+  },
+  {
     icon: Globe,
     title: "Diseño web profesional",
     description: "Creamos páginas web modernas, rápidas y optimizadas para convertir visitantes en clientes.",
@@ -22,12 +28,6 @@ const services = [
     icon: Share2,
     title: "Gestión de Redes Sociales",
     description: "Aumenta tu presencia online, conecta con tu audiencia y potencia tu marca en todas las plataformas sociales.",
-  },
-  {
-    icon: Brain,
-    title: "Automatizaciones con IA",
-    description: "Optimiza tu negocio con flujos automáticos y asistentes inteligentes personalizados.",
-    isNew: true,
   },
   {
     icon: Wrench,
