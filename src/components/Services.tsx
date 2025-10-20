@@ -1,5 +1,6 @@
 import { Globe, Smartphone, Search, Share2, Brain, Wrench } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const services = [
   {
@@ -26,6 +27,7 @@ const services = [
     icon: Brain,
     title: "Automatizaciones con IA",
     description: "Optimiza tu negocio con flujos automáticos y asistentes inteligentes personalizados.",
+    isNew: true,
   },
   {
     icon: Wrench,
@@ -55,10 +57,17 @@ const Services = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-8">
-                <div className="mb-6 inline-block p-4 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                <div className="mb-6 inline-block p-4 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors relative">
                   <service.icon className="w-8 h-8 text-primary" />
+                  {service.isNew && (
+                    <Badge variant="destructive" className="absolute -top-2 -right-2 text-xs animate-pulse">
+                      NUEVO
+                    </Badge>
+                  )}
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">{service.title}</h3>
+                <h3 className="text-xl font-bold mb-3 text-foreground flex items-center gap-2">
+                  {service.title}
+                </h3>
                 <p className="text-muted-foreground leading-relaxed">{service.description}</p>
               </CardContent>
             </Card>
