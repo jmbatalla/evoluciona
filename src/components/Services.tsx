@@ -101,6 +101,17 @@ const services = [
 
 const Services = () => {
   const [selectedService, setSelectedService] = useState<typeof services[0] | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleServiceClick = (service: typeof services[0]) => {
+    setSelectedService(service);
+    setIsOpen(true);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+    setTimeout(() => setSelectedService(null), 200);
+  };
 
   return (
     <section id="services" className="section-padding bg-background">
@@ -120,7 +131,7 @@ const Services = () => {
               key={index}
               className="hover-lift border-border bg-card shadow-card group animate-fade-in cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
-              onClick={() => setSelectedService(service)}
+              onClick={() => handleServiceClick(service)}
             >
               <CardContent className="p-8">
                 <div className="mb-6 inline-block p-4 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors relative">
@@ -141,7 +152,7 @@ const Services = () => {
         </div>
       </div>
 
-      <Dialog open={!!selectedService} onOpenChange={() => setSelectedService(null)}>
+      <Dialog open={isOpen} onOpenChange={handleClose}>
         <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold text-primary flex items-center gap-3">
@@ -169,7 +180,7 @@ const Services = () => {
             </div>
 
             <Button asChild variant="default" size="lg" className="w-full mt-6">
-              <a href="#contact" onClick={() => setSelectedService(null)}>
+              <a href="#contact" onClick={handleClose}>
                 Solicitar información
               </a>
             </Button>
