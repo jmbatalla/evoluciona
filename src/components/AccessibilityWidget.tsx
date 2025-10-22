@@ -207,7 +207,7 @@ const AccessibilityWidget = () => {
         aria-label="Opciones de accesibilidad"
         title="Opciones de accesibilidad"
       >
-        <Accessibility className="w-9 h-9 text-primary" />
+        <Accessibility className="w-11 h-11 text-primary" />
       </Button>
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
