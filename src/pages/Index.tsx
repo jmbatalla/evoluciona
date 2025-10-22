@@ -6,6 +6,7 @@ import Portfolio from "@/components/Portfolio";
 import ContactForm from "@/components/ContactForm";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Footer from "@/components/Footer";
+import CookieBanner from "@/components/CookieBanner";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <ContactForm />
       <WhatsAppButton />
       <Footer />
+      <CookieBanner />
     </div>
   );
 };

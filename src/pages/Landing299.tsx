@@ -6,6 +6,7 @@ import LandingCTA from "@/components/landing299/LandingCTA";
 import LandingForm from "@/components/landing299/LandingForm";
 import LandingUrgency from "@/components/landing299/LandingUrgency";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import CookieBanner from "@/components/CookieBanner";
 
 const Landing299 = () => {
   return (
@@ -28,6 +29,7 @@ const Landing299 = () => {
         <LandingForm />
         <LandingUrgency />
         <WhatsAppButton />
+        <CookieBanner />
       </div>
     </>
   );
