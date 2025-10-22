@@ -115,7 +115,9 @@ All colors MUST be HSL.
   }
 }
 
-/* Accessibility Styles */
+/* Accessibility Styles - European Accessibility Act 2025 Compliant */
+
+/* Font Size */
 .accessibility-font-large {
   font-size: 112.5% !important;
 }
@@ -124,14 +126,25 @@ All colors MUST be HSL.
   font-size: 125% !important;
 }
 
+/* Font Family for Dyslexia */
+.accessibility-font-dyslexia * {
+  font-family: 'Comic Sans MS', 'OpenDyslexic', Arial, sans-serif !important;
+}
+
+/* Contrast and Colors */
 .accessibility-high-contrast {
-  filter: contrast(1.5);
+  filter: contrast(1.5) !important;
+}
+
+.accessibility-invert-colors {
+  filter: invert(1) hue-rotate(180deg) !important;
 }
 
 .accessibility-grayscale {
-  filter: grayscale(100%);
+  filter: grayscale(100%) !important;
 }
 
+/* Spacing */
 .accessibility-line-height * {
   line-height: 2 !important;
 }
@@ -139,4 +152,38 @@ All colors MUST be HSL.
 .accessibility-text-spacing * {
   letter-spacing: 0.12em !important;
   word-spacing: 0.16em !important;
+}
+
+/* Text Alignment */
+.accessibility-align-left * {
+  text-align: left !important;
+}
+
+.accessibility-align-center * {
+  text-align: center !important;
+}
+
+.accessibility-align-justify * {
+  text-align: justify !important;
+}
+
+/* Navigation and Visualization */
+.accessibility-underline-links a {
+  text-decoration: underline !important;
+}
+
+.accessibility-big-cursor,
+.accessibility-big-cursor * {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M2 2 L2 28 L10 22 L14 30 L18 28 L14 20 L22 20 Z" fill="black" stroke="white" stroke-width="2"/></svg>') 0 0, auto !important;
+}
+
+.accessibility-hide-images img {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.accessibility-pause-animations,
+.accessibility-pause-animations * {
+  animation: none !important;
+  transition: none !important;
 }
