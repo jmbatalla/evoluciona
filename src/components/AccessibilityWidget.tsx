@@ -17,7 +17,8 @@ import {
   Link as LinkIcon,
   AlignLeft,
   ImageOff,
-  RotateCcw
+  RotateCcw,
+  Accessibility
 } from "lucide-react";
 
 interface AccessibilitySettings {
@@ -178,12 +179,12 @@ const AccessibilityWidget = () => {
     <>
       <Button
         onClick={() => setIsOpen(true)}
-        className="fixed left-4 bottom-20 z-40 rounded-full w-14 h-14 shadow-lg hover-lift bg-primary hover:bg-primary/90"
+        className="fixed left-4 bottom-20 z-40 rounded-full w-14 h-14 shadow-lg hover-lift bg-white hover:bg-white/90 border-2 border-gray-200"
         size="icon"
         aria-label="Opciones de accesibilidad"
         title="Opciones de accesibilidad"
       >
-        <UserCircle className="w-7 h-7" />
+        <Accessibility className="w-8 h-8 text-primary" />
       </Button>
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
