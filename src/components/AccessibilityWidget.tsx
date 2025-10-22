@@ -39,6 +39,7 @@ interface AccessibilitySettings {
 
 const AccessibilityWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [cookiesAccepted, setCookiesAccepted] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
     fontSize: "normal",
     fontFamily: "normal",
@@ -60,6 +61,26 @@ const AccessibilityWidget = () => {
     if (saved) {
       setSettings(JSON.parse(saved));
     }
+
+    const consent = localStorage.getItem("cookie-consent");
+    setCookiesAccepted(!!consent);
+
+    const handleStorage = () => {
+      const consent = localStorage.getItem("cookie-consent");
+      setCookiesAccepted(!!consent);
+    };
+
+    window.addEventListener("storage", handleStorage);
+    
+    const interval = setInterval(() => {
+      const consent = localStorage.getItem("cookie-consent");
+      setCookiesAccepted(!!consent);
+    }, 100);
+
+    return () => {
+      window.removeEventListener("storage", handleStorage);
+      clearInterval(interval);
+    };
   }, []);
 
   useEffect(() => {
@@ -179,7 +200,9 @@ const AccessibilityWidget = () => {
     <>
       <Button
         onClick={() => setIsOpen(true)}
-        className="fixed left-4 bottom-20 z-40 rounded-full w-14 h-14 shadow-lg hover-lift bg-white hover:bg-white/90 border-2 border-gray-200"
+        className={`fixed left-4 z-[60] rounded-full w-14 h-14 shadow-lg hover-lift bg-white hover:bg-white/90 border-2 border-gray-200 transition-all duration-300 ${
+          cookiesAccepted ? "bottom-6" : "bottom-24"
+        }`}
         size="icon"
         aria-label="Opciones de accesibilidad"
         title="Opciones de accesibilidad"

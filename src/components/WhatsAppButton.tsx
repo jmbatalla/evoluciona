@@ -1,12 +1,40 @@
 import { MessageCircle } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const WhatsAppButton = () => {
+  const [cookiesAccepted, setCookiesAccepted] = useState(false);
+
+  useEffect(() => {
+    const consent = localStorage.getItem("cookie-consent");
+    setCookiesAccepted(!!consent);
+
+    const handleStorage = () => {
+      const consent = localStorage.getItem("cookie-consent");
+      setCookiesAccepted(!!consent);
+    };
+
+    window.addEventListener("storage", handleStorage);
+    
+    // También escuchar cambios locales
+    const interval = setInterval(() => {
+      const consent = localStorage.getItem("cookie-consent");
+      setCookiesAccepted(!!consent);
+    }, 100);
+
+    return () => {
+      window.removeEventListener("storage", handleStorage);
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
     <a
       href="https://wa.me/34614247275"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform group"
+      className={`fixed right-6 z-[60] bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-all duration-300 group ${
+        cookiesAccepted ? "bottom-6" : "bottom-24"
+      }`}
       aria-label="Escríbeme por WhatsApp"
     >
       <MessageCircle className="w-8 h-8" />
