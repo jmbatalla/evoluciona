@@ -7,6 +7,7 @@ import LandingForm from "@/components/landing299/LandingForm";
 import LandingUrgency from "@/components/landing299/LandingUrgency";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieBanner from "@/components/CookieBanner";
+import AccessibilityWidget from "@/components/AccessibilityWidget";
 
 const Landing299 = () => {
   return (
@@ -30,6 +31,7 @@ const Landing299 = () => {
         <LandingUrgency />
         <WhatsAppButton />
         <CookieBanner />
+        <AccessibilityWidget />
       </div>
     </>
   );

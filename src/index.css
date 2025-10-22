@@ -114,3 +114,29 @@ All colors MUST be HSL.
     @apply py-20 px-4 md:px-8 lg:px-16;
   }
 }
+
+/* Accessibility Styles */
+.accessibility-font-large {
+  font-size: 112.5% !important;
+}
+
+.accessibility-font-xlarge {
+  font-size: 125% !important;
+}
+
+.accessibility-high-contrast {
+  filter: contrast(1.5);
+}
+
+.accessibility-grayscale {
+  filter: grayscale(100%);
+}
+
+.accessibility-line-height * {
+  line-height: 2 !important;
+}
+
+.accessibility-text-spacing * {
+  letter-spacing: 0.12em !important;
+  word-spacing: 0.16em !important;
+}
