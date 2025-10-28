@@ -1,5 +1,7 @@
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
 import compramosCasa from "@/assets/portfolio/compramos-casa.png";
 import showwise from "@/assets/portfolio/showwise.png";
 import estetizar from "@/assets/portfolio/estetizar.png";
@@ -10,39 +12,11 @@ import diferencialIngenieria from "@/assets/portfolio/diferencial-ingenieria.png
 
 const projects = [
   {
-    title: "Compramos Tu Casa en 1 Semana",
-    description: "Landing page optimizada para captación de leads inmobiliarios",
-    category: "Landing Page",
-    url: "https://compramostucasaen1semana.es/",
-    image: compramosCasa,
-  },
-  {
-    title: "ShowWise",
-    description: "Web corporativa para agencia consultora de espectáculos",
+    title: "Diferencial Ingeniería",
+    description: "Web corporativa de ingeniería con proyectos y licencias",
     category: "Página Web",
-    url: "http://showwise.es/",
-    image: showwise,
-  },
-  {
-    title: "Estetizar",
-    description: "Ecommerce de cosmética y complementos alimenticios",
-    category: "Ecommerce",
-    url: "https://estetizar.es/",
-    image: estetizar,
-  },
-  {
-    title: "Brutal Show",
-    description: "Web de espectáculos con gestión de eventos y roster",
-    category: "Página Web",
-    url: "https://espectaculosbrutalshow.com/",
-    image: brutalShow,
-  },
-  {
-    title: "DisplaceTool",
-    description: "Plataforma web y app móvil para accesibilidad urbana",
-    category: "Web + App",
-    url: "https://displacetool.es/",
-    image: displacetool,
+    url: "https://diferencialingenieria.es/",
+    image: diferencialIngenieria,
   },
   {
     title: "Grupo Hermosilla",
@@ -52,15 +26,52 @@ const projects = [
     image: grupoHermosilla,
   },
   {
-    title: "Diferencial Ingeniería",
-    description: "Web corporativa de ingeniería con proyectos y licencias",
+    title: "DisplaceTool",
+    description: "Plataforma web y app móvil para accesibilidad urbana",
+    category: "Web + App",
+    url: "https://displacetool.es/",
+    image: displacetool,
+  },
+  {
+    title: "Brutal Show",
+    description: "Web de espectáculos con gestión de eventos y roster",
     category: "Página Web",
-    url: "https://diferencialingenieria.es/",
-    image: diferencialIngenieria,
+    url: "https://espectaculosbrutalshow.com/",
+    image: brutalShow,
+  },
+  {
+    title: "Estetizar",
+    description: "Ecommerce de cosmética y complementos alimenticios",
+    category: "Ecommerce",
+    url: "https://estetizar.es/",
+    image: estetizar,
+  },
+  {
+    title: "ShowWise",
+    description: "Web corporativa para agencia consultora de espectáculos",
+    category: "Página Web",
+    url: "http://showwise.es/",
+    image: showwise,
+  },
+  {
+    title: "Compramos Tu Casa en 1 Semana",
+    description: "Landing page optimizada para captación de leads inmobiliarios",
+    category: "Landing Page",
+    url: "https://compramostucasaen1semana.es/",
+    image: compramosCasa,
   },
 ];
 
+const PROJECTS_PER_PAGE = 6;
+
 const Portfolio = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  
+  const totalPages = Math.ceil(projects.length / PROJECTS_PER_PAGE);
+  const startIndex = (currentPage - 1) * PROJECTS_PER_PAGE;
+  const endIndex = startIndex + PROJECTS_PER_PAGE;
+  const currentProjects = projects.slice(startIndex, endIndex);
+
   return (
     <section id="portfolio" className="section-padding bg-muted">
       <div className="container mx-auto">
@@ -74,8 +85,8 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {currentProjects.map((project, index) => (
             <a
               key={index}
               href={project.url}
@@ -106,6 +117,44 @@ const Portfolio = () => {
             </a>
           ))}
         </div>
+
+        {totalPages > 1 && (
+          <div className="flex items-center justify-center gap-4 animate-fade-in">
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+              disabled={currentPage === 1}
+              className="hover-lift"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </Button>
+            
+            <div className="flex items-center gap-2">
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                <Button
+                  key={page}
+                  variant={currentPage === page ? "default" : "outline"}
+                  size="icon"
+                  onClick={() => setCurrentPage(page)}
+                  className="w-10 h-10 hover-lift"
+                >
+                  {page}
+                </Button>
+              ))}
+            </div>
+
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+              disabled={currentPage === totalPages}
+              className="hover-lift"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );
