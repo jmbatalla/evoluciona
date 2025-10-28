@@ -9,8 +9,16 @@ import brutalShow from "@/assets/portfolio/brutal-show.png";
 import displacetool from "@/assets/portfolio/displacetool.png";
 import grupoHermosilla from "@/assets/portfolio/grupo-hermosilla.png";
 import diferencialIngenieria from "@/assets/portfolio/diferencial-ingenieria.png";
+import pistonCoolant from "@/assets/portfolio/piston-coolant.png";
 
 const projects = [
+  {
+    title: "Piston Coolant G12+",
+    description: "Diseño de marca y etiqueta para anticongelante refrigerante",
+    category: "Diseño de Marca",
+    url: "#",
+    image: pistonCoolant,
+  },
   {
     title: "Diferencial Ingeniería",
     description: "Web corporativa de ingeniería con proyectos y licencias",
