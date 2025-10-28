@@ -15,7 +15,7 @@ const projects = [
   {
     title: "Piston Coolant G12+",
     description: "Diseño de marca y etiqueta para anticongelante refrigerante",
-    category: "Diseño de Marca",
+    category: "Marca",
     url: "#",
     image: pistonCoolant,
   },
