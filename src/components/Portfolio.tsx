@@ -6,6 +6,7 @@ import estetizar from "@/assets/portfolio/estetizar.png";
 import brutalShow from "@/assets/portfolio/brutal-show.png";
 import displacetool from "@/assets/portfolio/displacetool.png";
 import grupoHermosilla from "@/assets/portfolio/grupo-hermosilla.png";
+import diferencialIngenieria from "@/assets/portfolio/diferencial-ingenieria.png";
 
 const projects = [
   {
@@ -49,6 +50,13 @@ const projects = [
     category: "Página Web",
     url: "https://grupohermosilla.es/",
     image: grupoHermosilla,
+  },
+  {
+    title: "Diferencial Ingeniería",
+    description: "Web corporativa de ingeniería con proyectos y licencias",
+    category: "Página Web",
+    url: "https://diferencialingenieria.es/",
+    image: diferencialIngenieria,
   },
 ];
 
