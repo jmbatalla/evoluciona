@@ -1,5 +1,5 @@
-import { MessageCircle } from "lucide-react";
 import { useState, useEffect } from "react";
+import whatsappLogo from "@/assets/whatsapp-logo.png";
 
 const WhatsAppButton = () => {
   const [cookiesAccepted, setCookiesAccepted] = useState(false);
@@ -37,7 +37,7 @@ const WhatsAppButton = () => {
       }`}
       aria-label="Escríbeme por WhatsApp"
     >
-      <MessageCircle className="w-7 h-7" />
+      <img src={whatsappLogo} alt="WhatsApp" className="w-7 h-7" />
       <span className="absolute bottom-full right-0 mb-2 px-3 py-2 bg-secondary text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
         Escríbeme por WhatsApp
       </span>
