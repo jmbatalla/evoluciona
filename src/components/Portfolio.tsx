@@ -27,11 +27,18 @@ const projects = [
     image: diferencialIngenieria,
   },
   {
-    title: "Grupo Hermosilla",
-    description: "Web corporativa para administración de fincas",
+    title: "ShowWise",
+    description: "Web corporativa para agencia consultora de espectáculos",
     category: "Página Web",
-    url: "https://grupohermosilla.es/",
-    image: grupoHermosilla,
+    url: "http://showwise.es/",
+    image: showwise,
+  },
+  {
+    title: "Compramos Tu Casa en 1 Semana",
+    description: "Landing page optimizada para captación de leads inmobiliarios",
+    category: "Landing Page",
+    url: "https://compramostucasaen1semana.es/",
+    image: compramosCasa,
   },
   {
     title: "DisplaceTool",
@@ -55,18 +62,11 @@ const projects = [
     image: estetizar,
   },
   {
-    title: "ShowWise",
-    description: "Web corporativa para agencia consultora de espectáculos",
+    title: "Grupo Hermosilla",
+    description: "Web corporativa para administración de fincas",
     category: "Página Web",
-    url: "http://showwise.es/",
-    image: showwise,
-  },
-  {
-    title: "Compramos Tu Casa en 1 Semana",
-    description: "Landing page optimizada para captación de leads inmobiliarios",
-    category: "Landing Page",
-    url: "https://compramostucasaen1semana.es/",
-    image: compramosCasa,
+    url: "https://grupohermosilla.es/",
+    image: grupoHermosilla,
   },
 ];
 
