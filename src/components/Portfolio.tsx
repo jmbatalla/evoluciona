@@ -10,6 +10,7 @@ import displacetool from "@/assets/portfolio/displacetool.png";
 import grupoHermosilla from "@/assets/portfolio/grupo-hermosilla.png";
 import diferencialIngenieria from "@/assets/portfolio/diferencial-ingenieria.png";
 import pistonCoolant from "@/assets/portfolio/piston-coolant.png";
+import cohen from "@/assets/portfolio/cohen.jpg";
 
 const projects = [
   {
@@ -18,6 +19,13 @@ const projects = [
     category: "Diseño Gráfico | Branding",
     url: "#",
     image: pistonCoolant,
+  },
+  {
+    title: "Cohen Antifreeze",
+    description: "Diseño de marca y etiqueta para líquido refrigerante",
+    category: "Diseño Gráfico | Branding",
+    url: "#",
+    image: cohen,
   },
   {
     title: "Diferencial Ingeniería",
