@@ -14,18 +14,18 @@ import cohen from "@/assets/portfolio/cohen.jpg";
 
 const projects = [
   {
-    title: "Piston Coolant G12+",
-    description: "Diseño de marca y etiqueta para anticongelante refrigerante",
-    category: "Diseño Gráfico | Branding",
-    url: "#",
-    image: pistonCoolant,
-  },
-  {
     title: "Cohen Antifreeze",
     description: "Diseño de marca y etiqueta para líquido refrigerante",
     category: "Diseño Gráfico | Branding",
     url: "#",
     image: cohen,
+  },
+  {
+    title: "Piston Coolant G12+",
+    description: "Diseño de marca y etiqueta para anticongelante refrigerante",
+    category: "Diseño Gráfico | Branding",
+    url: "#",
+    image: pistonCoolant,
   },
   {
     title: "Diferencial Ingeniería",
