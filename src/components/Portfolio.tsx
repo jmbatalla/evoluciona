@@ -11,8 +11,16 @@ import grupoHermosilla from "@/assets/portfolio/grupo-hermosilla.png";
 import diferencialIngenieria from "@/assets/portfolio/diferencial-ingenieria.png";
 import pistonCoolant from "@/assets/portfolio/piston-coolant.png";
 import cohen from "@/assets/portfolio/cohen.jpg";
+import claromktg from "@/assets/portfolio/claromktg.png";
 
 const projects = [
+  {
+    title: "Claro MKTG",
+    description: "Web corporativa para agencia de marketing digital",
+    category: "Página Web",
+    url: "https://claromktg.es/",
+    image: claromktg,
+  },
   {
     title: "Cohen Antifreeze",
     description: "Diseño de marca y etiqueta para líquido refrigerante",
