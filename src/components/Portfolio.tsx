@@ -12,8 +12,16 @@ import diferencialIngenieria from "@/assets/portfolio/diferencial-ingenieria.png
 import pistonCoolant from "@/assets/portfolio/piston-coolant.png";
 import cohen from "@/assets/portfolio/cohen.jpg";
 import claromktg from "@/assets/portfolio/claromktg.png";
+import altta from "@/assets/portfolio/altta.png";
 
 const projects = [
+  {
+    title: "Altta",
+    description: "Estudio de talento femenino para comunicación de marcas",
+    category: "Página Web",
+    url: "https://altta.es/",
+    image: altta,
+  },
   {
     title: "Claro MKTG",
     description: "Web corporativa para agencia de marketing digital",
