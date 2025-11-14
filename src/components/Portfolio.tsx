@@ -17,7 +17,7 @@ import altta from "@/assets/portfolio/altta.png";
 const projects = [
   {
     title: "Altta",
-    description: "Estudio de talento femenino para comunicación de marcas",
+    description: "Agencia de modelos y talento para campañas publicitarias",
     category: "Página Web",
     url: "https://altta.es/",
     image: altta,
