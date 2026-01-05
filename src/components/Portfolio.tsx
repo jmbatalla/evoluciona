@@ -13,8 +13,16 @@ import pistonCoolant from "@/assets/portfolio/piston-coolant.png";
 import cohen from "@/assets/portfolio/cohen.jpg";
 import claromktg from "@/assets/portfolio/claromktg.png";
 import altta from "@/assets/portfolio/altta.png";
+import doekel from "@/assets/portfolio/doekel.png";
 
 const projects = [
+  {
+    title: "Doekel Trading",
+    description: "Web corporativa para empresa de trading y distribución de marcas exclusivas",
+    category: "Página Web",
+    url: "https://doekel.es/",
+    image: doekel,
+  },
   {
     title: "Altta",
     description: "Agencia de modelos y talento para campañas publicitarias",
