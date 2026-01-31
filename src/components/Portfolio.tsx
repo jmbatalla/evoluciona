@@ -12,23 +12,23 @@ import diferencialIngenieria from "@/assets/portfolio/diferencial-ingenieria.png
 import pistonCoolant from "@/assets/portfolio/piston-coolant.png";
 import cohen from "@/assets/portfolio/cohen.jpg";
 import claromktg from "@/assets/portfolio/claromktg.png";
-import altta from "@/assets/portfolio/altta.png";
 import doekel from "@/assets/portfolio/doekel.png";
+import sgmartn from "@/assets/portfolio/sgmartn.png";
 
 const projects = [
+  {
+    title: "SG Martn",
+    description: "Web de entrenamiento personal y coaching deportivo",
+    category: "Página Web",
+    url: "https://sgmartn.com/",
+    image: sgmartn,
+  },
   {
     title: "Doekel Trading",
     description: "Web corporativa para empresa de trading y distribución de marcas exclusivas",
     category: "Página Web",
     url: "https://doekel.es/",
     image: doekel,
-  },
-  {
-    title: "Altta",
-    description: "Agencia de modelos y talento para campañas publicitarias",
-    category: "Página Web",
-    url: "https://altta.es/",
-    image: altta,
   },
   {
     title: "Claro MKTG",
