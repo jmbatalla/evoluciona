@@ -17,7 +17,7 @@ import sgmartn from "@/assets/portfolio/sgmartn.png";
 
 const projects = [
   {
-    title: "SG Martn",
+    title: "Sergio Martín",
     description: "Web de entrenamiento personal y coaching deportivo",
     category: "Página Web",
     url: "https://sgmartn.com/",
